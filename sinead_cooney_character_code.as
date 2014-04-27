@@ -66,5 +66,18 @@ function stage_CharBoundry(event:KeyboardEvent)
 		gilbert.scaleX = 1;
 	}
 	
+	
 }
 
+stage.addEventListener(KeyboardEvent.KEY_DOWN, stage_CharJump);
+
+function stage_CharJump(event:KeyboardEvent)
+{
+	if(event.keyCode == 38)
+	{
+		if (gilbert.currentFrame <= 42) 
+		{
+			gilbert.gotoAndPlay(43);
+		}
+	}
+}
